@@ -94,6 +94,20 @@ async function loadOptions() {
                 });
             }
 
+            if (data.versions < 1.9) {
+                // Nothing for now
+            }
+
+            if (data.versions < 2.0) {
+                data = {
+                    onlineSave: false, // New options to default
+                    onlineURL: "https://mmd.nikurasu.org/api/",
+                    username: "",
+                    password: "",
+                    version: 2.0
+                };
+            }
+
             await storageSet("options", data);
         } // Easy to add updates here, on another if and push the promise in the updates array
 

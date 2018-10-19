@@ -171,6 +171,71 @@
         </form>
         <ul id="malImportStatus" class="list-group">
         </ul>
+        <!-- Online Save -->
+        <h1 class="header-separator py-2 px-2"><i class="fas fa-globe"></i> Online Save</h1>
+        <p>Online Save will update your data on <a href="https://mmd.nikurasu.org">nikurasu</a> (my site).</p>
+        <p>You only need to set a Username and Password, then when you need to use your data on another computer, log in and your data will be imported.</p>
+        <p>All data is still saved locally, and the extension only use local storage to retrieve data, you can disable online save and delete all of your saved data at any time.<br />
+        What Online Save do is updating your save on my site every time your save is updated locally.</p>
+        <div class="row form-group px-2">
+            <div class="col-sm-1"><a data-default="onlineSave" class="btn btn-secondary"><i class="fas fa-trash"></i><span class="d-none d-sm-none d-md-none d-lg-none d-xl-inline"> Restore default</span></a></div>
+            <label class="col-sm-2 col-form-label">Online save</label>
+            <div data-option="onlineSave" data-type="checkbox" class="col px-0 my-auto input-group">
+                <div class="input-group-prepend">
+                    <button type="button" class="btn btn-success input-prepend col px-2">Enabled</button>
+                </div>
+                <div class="input-group-append">
+                    <button type="button" class="btn btn-secondary input-append col px-2 active">Disabled</button>
+                </div>
+            </div>
+        </div>
+        <p class="text-info">You are currently <b>LOGGED IN</b>.</p>
+        <!-- Logged in -->
+        <div class="row form-group px-2">
+            <div class="col-sm-3 col-form-label">Username</div>
+            <div class="col px-0 my-auto">USERNAME</div>
+        </div>
+        <div class="row form-group px-2">
+            <div class="col-sm-3 col-form-label">Password</div>
+            <div class="col px-0 my-auto">CLICK TO SHOW</div>
+        </div>
+        <div class="row form-group px-2">
+            <div class="col-sm-3 col-form-label">Application</div>
+            <div class="col px-0 my-auto"><a href="https://mmd.nikurasu.org/api/">https://mmd.nikurasu.org/api/</a></div>
+        </div>
+        <div class="row form-group px-2">
+            <div class="col-sm-3 col-form-label">Action</div>
+            <div class="col px-0 my-auto input-group">
+                <button class="btn btn-primary mr-2">Sync from Online</button>
+                <button class="btn btn-danger mr-2">Disconnect</button>
+                <button class="btn btn-danger mr-2">Delete Online Data</button>
+            </div>
+        </div>
+        <!-- Logged off -->
+        <p class="text-info">You are currently <b>LOGGED OFF</b>.</p>
+        <div id="online-logged-off">
+            <form>
+                <div class="row form-group px-2">
+                    <div class="col-sm-3 col-form-label">Username</div>
+                    <div class="col px-0 my-auto"><input type="text" class="form-control" name="username" placeholder="Username"></div>
+                </div>
+                <div class="row form-group px-2">
+                    <div class="col-sm-3 col-form-label">Password</div>
+                    <div class="col px-0 my-auto"><input type="password" class="form-control" name="password" placeholder="Password"></div>
+                </div>
+                <div class="row form-group px-2">
+                    <div class="col-sm-3 col-form-label">Application</div>
+                    <div class="col px-0 my-auto"><input type="text" class="form-control" name="application" placeholder="Application"></div>
+                </div>
+                <div class="text-right mt-2">
+                    <div class="form-check-inline">
+                        <input type="checkbox" class="form-check-input" name="eraseLocal" id="eraseLocal" checked="checked" />
+                        <label class="form-check-label" for="eraseLocal">Replace Local Save</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Connect</button>
+                </div>
+            </form>
+        </div>
         <!-- Delete -->
         <h1 class="header-separator py-2 px-2"><i class="fas fa-trash"></i> Delete</h1>
         <p>Click the delete button to delete all of your data. A new save will be created with default parameters. <strong>Not reversible.</strong></p>

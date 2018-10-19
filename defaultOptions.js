@@ -23,5 +23,9 @@ let defaultOptions = {
     maxChapterSaved: 100,
     updateMDList: false,
     showTooltips: true,
-    version: 1.8
+    onlineSave: false,
+    onlineURL: "https://mmd.nikurasu.org/api/",
+    username: "",
+    password: "",
+    version: 2.0
 };

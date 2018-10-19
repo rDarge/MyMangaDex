@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.0
+
+* Online Save
+
+## 1.9
+
 ## 1.8
 
 * Chrome version
